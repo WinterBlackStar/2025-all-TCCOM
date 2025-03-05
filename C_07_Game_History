@@ -1,2 +1,15 @@
+# initialise list to hold game history
+game_histoy = []
 
-#
+# get data (base componant does this already, code below for testing purposes)
+user_score = 0
+comp_score = 0
+
+while True:
+    rounds_played = input("round?")
+    if rounds_played == "":
+        break
+
+    rounds_played = input("Round?")
+    user_points = int(input("User points?"))
+    comp_points = int(input("Computer points?"))
