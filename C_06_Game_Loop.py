@@ -26,3 +26,5 @@ if user_score > comp_score:
     print("The user won")    # replace this with statement generator
 else:
     print("The computer won")
+
+print("new thing")
