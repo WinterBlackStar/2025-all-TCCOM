@@ -6,7 +6,6 @@ def yes_no(question):
     while True:
 
         response = input(question).lower()
-
         # check the user says yes / no/ /y / n
         if response == "yes" or response == "y":
             return "yes"

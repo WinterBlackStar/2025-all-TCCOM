@@ -2,14 +2,18 @@
 game_histoy = []
 
 # get data (base componant does this already, code below for testing purposes)
-user_score = 0
-comp_score = 0
 
 while True:
     rounds_played = input("round?")
     if rounds_played == "":
         break
 
-    rounds_played = input("Round?")
     user_points = int(input("User points?"))
     comp_points = int(input("Computer points?"))
+    winner = input("Who won?")
+    user_score = int(input("User score:"))
+    comp_score = int(input("Computer score:"))
+
+    game_result = (f"Round {round_played} : User Points: {user_points} | "
+                   f"Computer Points {comp_points}, {winner} wins (15 | 0)"
+                   f"({user_score} | {comp_score})")
