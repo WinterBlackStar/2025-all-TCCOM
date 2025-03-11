@@ -14,6 +14,13 @@ while True:
     user_score = int(input("User score:"))
     comp_score = int(input("Computer score:"))
 
-    game_result = (f"Round {round_played} : User Points: {user_points} | "
+    game_result = (f"Round {rounds_played} : User Points: {user_points} | "
                    f"Computer Points {comp_points}, {winner} wins (15 | 0)"
                    f"({user_score} | {comp_score})")
+    
+    game_histoy.append(game_result)
+
+print("Game History")
+
+for item in game_histoy:
+    print(item)
