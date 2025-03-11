@@ -74,6 +74,8 @@ comp_score = 0
 user_score = 0
 rounds_played = 0
 
+game_histoy = []
+
 make_statement("Welcome to the Roll It 13 Game", "😊")
 
 # ask the user if they want to see instructions (check is they say yes / no)
@@ -190,6 +192,13 @@ while comp_score < game_goal and user_score < game_goal:
     comp_score += comp_points
     user_score += user_points
 
+    # Generate round results and add it to the game history list
+    game_result = (f"Round {rounds_played} : User Points: {user_points} | "
+                   f"Computer Points {comp_points}, {winner} wins (15 | 0)"
+                   f"({user_score} | {comp_score})")
+    
+    game_histoy.append(game_result)
+
     # show overall scores (add this to rounds loop)
 print("*** Game Update ***")    # replace with call to statement generator
 print(f"User Score: {user_score} | Computer Score {comp_score}")
@@ -200,6 +209,11 @@ make_statement("Game Over", "🏁")
 
 print()
 if user_score > comp_score:
-    print("The user won")    # replace this with statement generator
+    make_statement("The user won", "👍")    # replace this with statement generator
 else:
-    print("The computer won")
+    make_statement("The computer won", "💻")
+
+    make_statement("Game History", "🎲")
+
+for item in game_histoy:
+    print(item)
